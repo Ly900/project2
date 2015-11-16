@@ -5,6 +5,7 @@
 <% @students.each do |student| %>
   <p>
     <strong>Student Name:</strong> <%= student.name %>
+    <!-- <%#= link_to "View Contact Log", student_log_path(student) %> -->
     <%= link_to "Edit Student", edit_student_path(student) %>
     <%= link_to "Delete Student", student_path(student), method: :delete %>
   </p>
@@ -23,4 +24,5 @@
     <strong>Email Address:</strong>
     <%= student.email_address %>
   </p>
+
 <% end %>
