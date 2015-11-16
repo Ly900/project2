@@ -1,5 +1,7 @@
 <h1>All Your Students</h1>
-<%= render "form" %>
+
+<%= link_to "Add a New Student", new_student_path.inspect %>
+
 <% @student.each do |student| %>
   <p><%= student.name %></p>
   <p><%= student.date_of_birth.to_s(:long) %></p>
