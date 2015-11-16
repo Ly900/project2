@@ -1,0 +1,9 @@
+<h1>All Your Students</h1>
+<%= render "form" %>
+<% @student.each do |student| %>
+  <p><%= student.name %></p>
+  <p><%= student.date_of_birth.to_s(:long) %></p>
+  <p><%= student.address %></p>
+  <p><%= student.phone_number %></p>
+  <p><%= student.email_address %></p>
+<% end %>
