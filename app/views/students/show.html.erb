@@ -4,7 +4,7 @@
 
 <%= link_to "Edit Student", edit_student_path(@student) %>
 <p><%= @student.name %></p>
-<p><%= @student.date_of_birth.to_s %></p>
+<p><%= @student.date_of_birth.to_s(:long) %></p>
 <p><%= @student.address %></p>
 <p><%= @student.phone_number %></p>
 <p><%= @student.email_address %></p>
