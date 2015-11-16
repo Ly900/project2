@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "students#index"
+  root to: "students#index"
 
-  resources :student
+  resources :students
 end
