@@ -1,3 +1,3 @@
 class Student < ActiveRecord::Base
-  has_many :pins
+  has_many :logs, dependent: :destroy
 end
