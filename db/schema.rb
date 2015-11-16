@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151116001427) do
+ActiveRecord::Schema.define(version: 20151116182035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "logs", force: :cascade do |t|
+    t.date     "date_of_contact"
+    t.string   "mode_of_contact"
+    t.string   "type_of_contact"
+    t.text     "contact_details"
+    t.integer  "student_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "logs", ["student_id"], name: "index_logs_on_student_id", using: :btree
 
   create_table "students", force: :cascade do |t|
     t.string   "name"
@@ -26,4 +38,5 @@ ActiveRecord::Schema.define(version: 20151116001427) do
     t.datetime "updated_at",    null: false
   end
 
+  add_foreign_key "logs", "students"
 end
