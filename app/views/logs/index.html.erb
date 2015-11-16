@@ -1,7 +1,7 @@
 <h2><%= @student.name %></h2>
 <h4>
   <%= link_to "Back", students_path %></h4>
-<h3>Contact Log</h3>
+<h3>Contact Logs</h3>
 
 <% @student.logs.each do |log| %>
   <p>
@@ -13,5 +13,6 @@
     <%= log.type_of_contact %> <br>
     <strong>Contact Details:</strong>
     <%= log.contact_details %>
+    <%= link_to "Edit Log", edit_student_log_path(@student, log) %>
   </p>
 <% end %>
