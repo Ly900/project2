@@ -6,6 +6,7 @@ class LogsController < ApplicationController
   end
 
   def index
+    @student = Student.find(params[:student_id])
   end
 
   def edit

@@ -2,13 +2,13 @@
 
 <%= link_to "Add a New Student", new_student_path %>
 
-<% @students.each do |student| %>
+<% not_sorted = @students.each do |student| %>
   <p>
-    <strong>Student Name:</strong> <%= student.name %>
-    <%= link_to "View Contact Log", student_logs_path(student) %>
-    <%= link_to "Edit Student", edit_student_path(student) %>
-    <%= link_to "Delete Student", student_path(student), method: :delete %> <br>
-  <strong>DOB:</strong>
+    <strong>First Name:</strong>
+    <%= student.first_name %><br>
+    <strong>Last Name:</strong>
+    <%= student.last_name %><br>
+    <strong>DOB:</strong>
     <%= student.date_of_birth %>
     <br>
     <strong>Address:</strong>
@@ -16,7 +16,9 @@
     <strong>Phone Number:</strong>
     <%= student.phone_number %> <br>
     <strong>Email Address:</strong>
-    <%= student.email_address %>
+    <%= student.email_address %><br>
+    <%= link_to "View Contact Log", student_logs_path(student) %>
+    <%= link_to "Edit Student", edit_student_path(student) %>
+    <%= link_to "Delete Student", student_path(student), method: :delete %> <br>
   </p>
-
 <% end %>
