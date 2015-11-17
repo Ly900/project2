@@ -18,5 +18,6 @@
     <strong>Contact Details:</strong>
     <%= log.contact_details %>
     <%= link_to "Edit Log", edit_student_log_path(@student, log) %>
+    <%= link_to "Delete Log", student_log_path(@student, log), method: :delete %>
   </p>
 <% end %>

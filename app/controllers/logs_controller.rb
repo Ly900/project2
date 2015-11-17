@@ -21,7 +21,16 @@ class LogsController < ApplicationController
   end
 
   def create
+    @student = Student.find(params[:student_id])
+    @log = @student.logs.create!(log_params)
+    redirect_to student_logs_path(@student)
+  end
 
+  def destroy
+    @student = Student.find(params[:student_id])
+    @log = Log.find(params[:id])
+    @log.destroy
+    redirect_to student_logs_path(@student)
   end
 
   private
