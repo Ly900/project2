@@ -1,6 +1,7 @@
 class LogsController < ApplicationController
   before_action :find_student
-
+  before_action :authenticate_user!
+  
   def find_student
     @student = @student = Student.find(params[:student_id])
   end
