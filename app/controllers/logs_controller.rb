@@ -1,33 +1,33 @@
 class LogsController < ApplicationController
+  before_action :find_student
+
+  def find_student
+    @student = @student = Student.find(params[:student_id])
+  end
+
   def index
-    @student = Student.find(params[:student_id])
   end
 
   def edit
-    @student = Student.find(params[:student_id])
     @log = Log.find(params[:id])
   end
 
   def update
-    @student = Student.find(params[:student_id])
     @log = Log.find(params[:id])
     @log.update!(log_params)
     redirect_to student_logs_path(@student)
   end
 
   def new
-    @student = Student.find(params[:student_id])
     @log = Log.new
   end
 
   def create
-    @student = Student.find(params[:student_id])
     @log = @student.logs.create!(log_params)
     redirect_to student_logs_path(@student)
   end
 
   def destroy
-    @student = Student.find(params[:student_id])
     @log = Log.find(params[:id])
     @log.destroy
     redirect_to student_logs_path(@student)

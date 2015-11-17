@@ -9,7 +9,7 @@
     <%= link_to "Edit Student", edit_student_path(student) %>
     <%= link_to "Delete Student", student_path(student), method: :delete %> <br>
   <strong>DOB:</strong>
-    <%= student.date_of_birth.to_s(:long) %>
+    <%= student.date_of_birth %>
     <br>
     <strong>Address:</strong>
     <%= student.address %> <br>
