@@ -1,3 +1,4 @@
+<%= link_to "Back", student_logs_path(@student) %>
 <%= form_for [@student, @log] do |f| %>
   <p>
     <%= f.label :date_of_contact %>:<br>
@@ -16,6 +17,8 @@
   <p>
     <%= f.label :contact_details %>:<br>
     <%= f.text_area :contact_details, :cols => 50, :rows => 10 %>
+  </p>
+  <p>
+    <%= f.submit %>
   </p>
-
 <% end %>
