@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     @students = Student.all
@@ -35,7 +36,7 @@ class StudentsController < ApplicationController
 
   private
     def student_params
-      params.require(:student).permit(:first_name, :last_name, :date_of_birth, :address, :phone_number, :email_address) 
+      params.require(:student).permit(:first_name, :last_name, :date_of_birth, :address, :phone_number, :email_address)
     end
 
 end
