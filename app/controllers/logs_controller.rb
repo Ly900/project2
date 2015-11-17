@@ -1,9 +1,8 @@
 class LogsController < ApplicationController
   before_action :find_student
-  before_action :authenticate_user!
-  
+
   def find_student
-    @student = @student = Student.find(params[:student_id])
+    @student = Student.find(params[:student_id])
   end
 
   def index
@@ -25,11 +24,11 @@ class LogsController < ApplicationController
   end
 
   def create
-    @log = @student.logs.create!(log_params)
+    @student.logs.create!(log_params)
     redirect_to student_logs_path(@student)
   end
 
-  def destroy
+  def destroy 
     @log = Log.find(params[:id])
     @log.destroy
     redirect_to student_logs_path(@student)
