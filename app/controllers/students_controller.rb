@@ -6,7 +6,10 @@ class StudentsController < ApplicationController
   end
 
   def index
-    @students = Student.all
+    if current_user
+    @students = current_user.students
+    else
+    end
   end
 
   def show

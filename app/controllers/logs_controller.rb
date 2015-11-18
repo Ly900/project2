@@ -28,7 +28,7 @@ class LogsController < ApplicationController
     redirect_to student_logs_path(@student)
   end
 
-  def destroy 
+  def destroy
     @log = Log.find(params[:id])
     @log.destroy
     redirect_to student_logs_path(@student)
