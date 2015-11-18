@@ -5,19 +5,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="//use.edgefonts.net/lato"></script>
 </head>
 <body>
-
-<h1>TeacherFAMConnect </h1>
-
-<% if current_user %>
-  <strong>Signed in as:</strong>
-  <%= current_user.email %>
-  <h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
-<% else %>
-  <h3><%= link_to 'Signup', new_user_registration_path %></h3>
-  <h3><%= link_to 'Login', new_user_session_path %></h3>
-<% end %>
+  <header>
+    <ul class="left">
+      <li>
+          <h1 id="logo">
+            <strong>T</strong>eacher<strong>F</strong>am<strong>C</strong>onnect.
+          </h1>
+      </li>
+    </ul>
+    <ul class="right">
+      <li>
+        <% if current_user %>
+          <h2 id="sign_in_status">Signed in as: <%= current_user.email %>
+            <%= link_to "Signout", destroy_user_session_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Signup', new_user_registration_path %>
+              <%= link_to 'Login', new_user_session_path %>
+          </h2>
+        <% end %>
+      </li>
+    </ul>
+  </header>
 
 <%= yield %>
 
