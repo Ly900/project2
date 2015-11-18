@@ -1,4 +1,4 @@
-html, body, header, h1, h2, ul, li {
+html, body, header, h1, h2, h3, ul, li, span {
   margin: 0;
   padding: 0;
   border: 0;
@@ -17,13 +17,13 @@ body {
 
 header {
   background-color: #30A1CE;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  /*box-shadow: 0px 1px 6px gray;*/
+  /*border-top: 1px solid black;*/
+  /*border-bottom: 1px solid black;*/
+  box-shadow: 0px 2px 5px gray;
   position: fixed;
   width: 100%;
-  margin-bottom: 10px;
-} 
+  padding: 5px;
+}
 
 h1#logo {
   font-size: 25px;
@@ -37,21 +37,32 @@ h1#logo {
 h2#sign_in_status {
   font-size: 15px;
   font-weight: 100;
+  letter-spacing: 1px;
   color: #fff;
 }
 
 ul.left {
   list-style: none;
-  display: inline-block;
   text-align: left;
-  width: 75%;
+  /*border: 1px solid black;*/
+  width: 100%;
+  float: left;
 }
 
 ul.right {
   list-style: none;
-  display: inline-block;
-  text-align: right;
+  /*border: 1px solid black;*/
+  width: 100%;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-li {
+h3 {
+  font-size: 30px;
+  color: black;
+  padding-top: 80px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform:  uppercase;
+  font-weight: 100;
 }
