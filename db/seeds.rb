@@ -6,13 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # User.destroy_all
+User.destroy_all
 Student.destroy_all
 Log.destroy_all
 
-# user_ly = User.create(email: "ly@email.com",
-#              encrypted_password: "123456789")
-#
-# user_ly.students.create(first_name: "Andy", last_name: "Anderson", date_of_birth: "1/2/2005", address: "123 Bird Lane, Washington DC, 20010", phone_number: "202-123-4567", email_address: "andy.anderson@yahoo.com")
+users = User.create!([
+  {email: "Teacher1@email.com", password: "password", password_confirmation: "password"},
+  {email: "Teacher2@email.com", password: "password", password_confirmation: "password"},
+  {email: "Teacher3@email.com", password: "password", password_confirmation: "password"},
+])
+
+andy = Student.create(first_name: "Andy", last_name: "Anderson", date_of_birth: "1/2/2005", address: "123 Bird Lane, Washington DC, 20010", phone_number: "202-123-4567", email_address: "andy.anderson@yahoo.com")
 
 andy.logs.create(date_of_contact: "5/3/2015", mode_of_contact: "Phonecall", type_of_contact: "Positive", contact_details: "Called to tell Andy's mom that he has been behaving very well this week and turned in all his homework.")
 
