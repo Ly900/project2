@@ -1,4 +1,4 @@
-html, body, h1, h2, ul, li {
+html, body, header, h1, h2, ul, li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,7 +6,7 @@ html, body, h1, h2, ul, li {
 }
 
 html, body {
-  background-color: #EAEAEC;
+  background-color: #EBF6FC;
   font-family: "lato", sans-serif;
   font-weight: 100;
 }
@@ -15,23 +15,36 @@ body {
   margin: 0 auto;
 }
 
+header {
+  background-color: #30A1CE;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  /*box-shadow: 0px 1px 6px gray;*/
+  position: fixed;
+  width: 100%;
+  margin-bottom: 10px;
+} 
+
 h1#logo {
   font-size: 25px;
   font-weight: 300;
   font-variant: small-caps;
   letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 1px 0px 0px #213EAD;
 }
 
 h2#sign_in_status {
   font-size: 15px;
   font-weight: 100;
+  color: #fff;
 }
 
 ul.left {
   list-style: none;
   display: inline-block;
   text-align: left;
-  width: 75%; 
+  width: 75%;
 }
 
 ul.right {
@@ -41,5 +54,4 @@ ul.right {
 }
 
 li {
-
 }
