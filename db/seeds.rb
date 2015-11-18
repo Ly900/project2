@@ -8,12 +8,11 @@
 # User.destroy_all
 User.destroy_all
 Student.destroy_all
-Log.destroy_all 
+Log.destroy_all
 
 User.create!([
   {email: "teacher1@email.com", password: "password", password_confirmation: "password"},
   {email: "teacher2@email.com", password: "password", password_confirmation: "password"},
-  {email: "teacher3@email.com", password: "password", password_confirmation: "password"},
 ])
 
 teacher1 = User.find_by(email:"teacher1@email.com")
@@ -23,13 +22,28 @@ teacher1.students.create([
   {first_name: "Carol", last_name: "Cluster", date_of_birth: "3/4/2005", address: "123 Dog Circle, Washington, DC 200012", phone_number: "202-345-6789", email_address: "carol.cluster@aol.com"}
 ])
 
+Student.find_by(first_name:"Andy").logs.create([
+  {date_of_contact: "9/30/2015", mode_of_contact: "Phonecall", type_of_contact: "Positive", contact_details: "Called to tell Andy's mom that he has been behaving very well this week and turned in all his homework."},
+  {date_of_contact: "10/05/2015", mode_of_contact: "Email", type_of_contact: "Negative", contact_details: "Andy missed a few assignments this week. Seems to be getting more playful and distracted in class."}
+])
+
+Student.find_by(first_name:"Beatrice").logs.create([
+  {date_of_contact: "10/01/2015", mode_of_contact: "Phonecall", type_of_contact: "Positive", contact_details: "Beatrice is a friendly girl who has been very helpful with classroom chores."},
+  {date_of_contact: "10/15/2015", mode_of_contact: "In person", type_of_contact: "Negative", contact_details: "Beatrice has been teasing and calling Carol names."},
+])
+
 teacher2 = User.find_by(email:"teacher2@email.com")
 teacher2.students.create([
   {first_name: "Dunkin", last_name: "Donuts", date_of_birth: "4/4/2005", address: "123 Rabbit Boulevard, Washington, DC 20013", phone_number: "202-456-7890", email_address: "dunkin.d@aol.com"},
   {first_name: "Eric", last_name: "Evil", date_of_birth: "5/5/2005", address: "123 Pidegon Road, Washington, DC 20014", phone_number: "202-567-8901", email_address: "eric.evil@hotmail.com"}
 ])
 
-#
-# andy.logs.create(date_of_contact: "5/3/2015", mode_of_contact: "Phonecall", type_of_contact: "Positive", contact_details: "Called to tell Andy's mom that he has been behaving very well this week and turned in all his homework.")
-#
-# andy.logs.create(date_of_contact: "5/4/2015", mode_of_contact: "Email", type_of_contact: "Negative", contact_details: "Lying in class.")
+Student.find_by(first_name:"Dunkin").logs.create([
+  {date_of_contact: "10/03/2015", mode_of_contact: "In person", type_of_contact: "Positive", contact_details: "Dunkin asked if the class could have a class pet and wrote a wonderful persuasive essay on why it should be a hamster."},
+  {date_of_contact: "10/20/2015", mode_of_contact: "Email", type_of_contact: "Neutral", contact_details: "Dunkin has not been eating the school lunch. Called mom and she said he gets full off of donuts in the morning."}
+])
+
+Student.find_by(first_name:"Eric").logs.create([
+  {date_of_contact: "09/20/2015", mode_of_contact: "Email", type_of_contact: "Positive", contact_details: "Eric got 100% on his quiz on Native Americans. Mom asked if he could bring more books home about Native Americans. Mom says they do not have many books at home."},
+  {date_of_contact: "11/20/2015", mode_of_contact: "In person", type_of_contact: "Negative", contact_details: "While we had a substitute teacher, Eric let the hamster out and the hamster is now missing."}  
+])
