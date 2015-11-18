@@ -22,7 +22,7 @@ header {
   background: linear-gradient(to right, #30A1CE , #CAFFFF);
   background-color: #30A1CE;
   /*box-shadow: 0px 2px 5px gray;*/
-  position: fixed;
+  border-top: 20px solid #04196B;
   width: 100%;
   padding: 5px;
 }
@@ -62,7 +62,6 @@ ul.right {
 h3 {
   font-size: 30px;
   color: black;
-  padding-top: 80px;
   text-align: center;
   letter-spacing: 3px;
   text-transform:  uppercase;
