@@ -11,6 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+
+$("button.bob").on("click", function () {
+  alert("Bob was clicked!");
+
+
+})
+
+})

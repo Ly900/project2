@@ -13,7 +13,7 @@
 </h4>
 
 <% @student.logs.each do |log| %>
-  <p>
+  <p style="background: <%=log.get_color%>">
     <strong>Date of Contact:</strong>
     <%= log.date_of_contact %> <br>
     <strong>Mode of Contact:</strong>
