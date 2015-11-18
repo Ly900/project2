@@ -16,10 +16,12 @@ body {
 }
 
 header {
+  background: -webkit-linear-gradient(left, #30A1CE , #CAFFFF);
+  background: -o-linear-gradient(right, #30A1CE, #CAFFFF);
+  background: -moz-linear-gradient(right, #30A1CE, #CAFFFF);
+  background: linear-gradient(to right, #30A1CE , #CAFFFF);
   background-color: #30A1CE;
-  /*border-top: 1px solid black;*/
-  /*border-bottom: 1px solid black;*/
-  box-shadow: 0px 2px 5px gray;
+  /*box-shadow: 0px 2px 5px gray;*/
   position: fixed;
   width: 100%;
   padding: 5px;
