@@ -10,8 +10,7 @@ class LogsController < ApplicationController
     @students = current_user.students
     else
     end
-    @student = Student.find(params[:student_id])
-  end
+  end 
 
   def edit
     @log = Log.find(params[:id])
@@ -21,7 +20,7 @@ class LogsController < ApplicationController
     @log = Log.find(params[:id])
     @log.update!(log_params)
     redirect_to student_logs_path(@student)
-  end 
+  end
 
   def new
     @log = Log.new
