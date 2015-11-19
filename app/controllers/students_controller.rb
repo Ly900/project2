@@ -11,7 +11,7 @@ class StudentsController < ApplicationController
     else
     end
   end
-  
+
   def new
     @student = Student.new
   end
@@ -27,7 +27,7 @@ class StudentsController < ApplicationController
 
   def update
     @student.update!(student_params)
-    redirect_to students_path
+    redirect_to student_logs_path(@student)
   end
 
   def destroy

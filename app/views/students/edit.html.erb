@@ -1,5 +1,10 @@
-<h2>Edit Student</h2>
-<%= link_to "Go back", students_path %> |
-<%= link_to "Delete Student", student_path(@student), method: :delete %>
+<%= link_to student_logs_path(@student) do %>
+  <span aria-hidden="true"><h4 class="nav">&laquo; Back</h4></span>
+<% end %>
+
+<h3>Edit Student</h3>
 
 <%= render "form" %>
+<h5 class="text-left">
+  <%= link_to "Delete Student", student_path(@student), method: :delete %>
+</h5>

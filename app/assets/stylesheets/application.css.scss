@@ -16,7 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html, body, header, h1, h2, h3, ul, li, a, button, div, img, dl, dt, dd {
+html, body, header, h1, h2, h3, h4, ul, li, a, button, div, img, dl, dt, dd {
   margin: 0;
   padding: 0;
   border: 0;
@@ -167,6 +167,7 @@ button.student_info {
 
 h4 {
   color: #01146D;
+  margin: 20px 0px;
 }
 
 h4.nav {
@@ -183,4 +184,24 @@ div.student_contact_info {
 
 .dl-horizontal {
   padding: 10px;
+}
+
+ul.list-group {
+  width: 75%;
+  margin: 10px auto;
+}
+
+li.list-group-item {
+  display: table-cell;
+}
+
+li.list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 85%;
+}
+
+li.list-group-item:last-child {
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 4px;
 }

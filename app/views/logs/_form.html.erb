@@ -1,4 +1,7 @@
-<%= link_to "Back", student_logs_path(@student) %>
+<%= link_to student_logs_path(@student) do %>
+  <span aria-hidden="true"><h4 class="nav">&laquo; Back</h4></span>
+<% end %>
+
 <%= form_for [@student, @log] do |f| %>
   <p>
     <%= f.label :date_of_contact %>:<br>

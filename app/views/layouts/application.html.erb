@@ -22,8 +22,8 @@
           <h2>Signed in as: <%= current_user.email %>
             <%= link_to "Sign out", destroy_user_session_path, :method => :delete, id: "sign_in" %>
             <% else %>
-              <%= link_to "Sign up", new_user_registration_path, class: "sign_in", id: "sign_in" %>
-              <%= link_to "Log in", new_user_session_path, class: "sign_in", id: "sign_in" %>
+              <%= link_to "Sign up page", new_user_registration_path, class: "sign_in", id: "sign_in" %> |
+              <%= link_to "Log in page", new_user_session_path, class: "sign_in", id: "sign_in" %>
           </h2>
         <% end %>
       </li>

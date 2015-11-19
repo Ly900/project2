@@ -21,7 +21,7 @@ class LogsController < ApplicationController
     @log = Log.find(params[:id])
     @log.update!(log_params)
     redirect_to student_logs_path(@student)
-  end
+  end 
 
   def new
     @log = Log.new
