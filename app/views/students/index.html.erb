@@ -3,8 +3,22 @@
   <img src="/assets/boy-reading.gif" id="boy">
 </div>
 <div class="button_wrapper">
-  <button class="btn-lg btn"><%= link_to "Add a New Student", new_student_path %></button>
+  <h4><button class="btn-lg btn"><%= link_to "Add a New Student", new_student_path %></button></h4>
 </div>
+
+<div class="wrapper">
+  <% @students.each do |student| %>
+    <button class="student_info btn-info" >
+      <h4>
+        <%= student.first_name %> <%= student.last_name %><br>
+        <%= link_to "View Contact Log", student_logs_path(student) %>
+      </h4>
+    </button>
+  <% end %>
+</div>
+
+
+
 
 <% @students.each do |student| %>
   <div class="student_info">

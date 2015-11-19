@@ -19,11 +19,11 @@
     <ul class="right">
       <li>
         <% if current_user %>
-          <h2 id="sign_in_status">Signed in as: <%= current_user.email %>
-            <%= link_to "Signout", destroy_user_session_path, :method => :delete %>
+          <h2>Signed in as: <%= current_user.email %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, id: "sign_in" %>
             <% else %>
-              <%= link_to 'Signup', new_user_registration_path %>
-              <%= link_to 'Login', new_user_session_path %>
+              <%= link_to "Sign up", new_user_registration_path, class: "sign_in", id: "sign_in" %>
+              <%= link_to "Log in", new_user_session_path, class: "sign_in", id: "sign_in" %>
           </h2>
         <% end %>
       </li>

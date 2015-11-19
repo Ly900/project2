@@ -23,14 +23,20 @@ html, body, header, h1, h2, h3, ul, li, a, button, div, img {
   box-sizing: border-box;
 }
 
+html {
+  background-color: #C0DBF3;
+}
+
 html, body {
-  background-color: #EBF6FC;
   font-family: "lato", sans-serif;
   font-weight: 100;
 }
 
 body {
+  background-color: #EBF6FC;
+  width: 75%;
   margin: 0 auto;
+  min-height: 500px;
 }
 
 header {
@@ -54,12 +60,20 @@ h1#logo {
   text-shadow: 1px 0px 0px #213EAD;
 }
 
-h2#sign_in_status {
+h2 {
+  display: inline-block;
   font-size: 13px;
   font-weight: 100;
   letter-spacing: 1px;
-  color: #fff;
-  margin-left: 2px;
+  color: #01146D;
+}
+
+a#sign_in {
+  color: #D70E3A;
+}
+
+a#sign_in:hover {
+  color: #FFFFFF;
 }
 
 ul.left {
@@ -109,36 +123,46 @@ img#boy {
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 0;
-    background-color: #FFB600;
+    background-color: #FF9C00;
     margin-bottom: 10px;
 }
 
 .btn:hover {
-  background-color: #FAD16B;
+  background-color: #FF6D00;
 }
 
 .btn:active {
   background-color: #FF9C00;
 }
 
+.btn-info {
+  background-color: rgb(152, 222, 91);
+}
+
 a:link {
-  color: #103555;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 a:hover{
-  color: #103555;
+  color: #FFFFFF;
 }
 
 a:visited{
-  color: #103555;
+  color: #FFFFFF;
 }
 
-div.student_info {
-  border: 1px solid orange;
-  background-color: #FFFFFF;
+div.wrapper {
+  text-align: center;
+}
+
+button.student_info {
   display: inline-block;
-  margin: 5px;
+  margin: 5px auto;
   padding: 5px;
-  width: 100%;
+  width: 75%;
+}
+
+h4 {
+  color: #FFFFFF;
 }
