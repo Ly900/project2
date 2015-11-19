@@ -6,6 +6,10 @@ class LogsController < ApplicationController
   end
 
   def index
+    if current_user
+    @students = current_user.students
+    else
+    end
     @student = Student.find(params[:student_id])
   end
 

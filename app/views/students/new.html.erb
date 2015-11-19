@@ -1,7 +1,9 @@
-<h2>Add a New Student</h2>
+<h3>Add a New Student</h3>
+
+<%= link_to students_path do %>
+  <span aria-hidden="true"><h4 class="nav">&laquo; Back</h4></span>
+<% end %>
 
 <p>
-  <%= link_to "Go back", students_path %>
-</p>
-
   <%= render "form" %>
+</p>

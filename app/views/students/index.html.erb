@@ -1,42 +1,17 @@
 <h3>My Class</h3>
+
 <div class="image">
   <img src="/assets/boy-reading.gif" id="boy">
 </div>
+
 <div class="button_wrapper">
   <h4><button class="btn-lg btn"><%= link_to "Add a New Student", new_student_path %></button></h4>
 </div>
 
 <div class="wrapper">
   <% @students.each do |student| %>
-    <button class="student_info btn-info" >
-      <h4>
-        <%= student.first_name %> <%= student.last_name %><br>
-        <%= link_to "View Contact Log", student_logs_path(student) %>
-      </h4>
-    </button>
+    <%= link_to (student_logs_path(student)) do %>
+      <button class="student_info btn-info"><h4><%= student.first_name%> <%= student.last_name %></h4></button>
+    <% end %>
   <% end %>
 </div>
-
-
-
-
-<% @students.each do |student| %>
-  <div class="student_info">
-    <strong>First Name:</strong>
-    <%= student.first_name %><br>
-    <strong>Last Name:</strong>
-    <%= student.last_name %><br>
-    <strong>DOB:</strong>
-    <%= student.date_of_birth %>
-    <br>
-    <strong>Address:</strong>
-    <%= student.address %> <br>
-    <strong>Phone Number:</strong>
-    <%= student.phone_number %> <br>
-    <strong>Email Address:</strong>
-    <%= student.email_address %><br>
-    <%= link_to "View Contact Log", student_logs_path(student) %>
-    <%= link_to "Edit Student", edit_student_path(student) %>
-    <%= link_to "Delete Student", student_path(student), method: :delete %> <br>
-  </div>
-<% end %>

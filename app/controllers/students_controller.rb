@@ -11,10 +11,7 @@ class StudentsController < ApplicationController
     else
     end
   end
-
-  def show
-  end
-
+  
   def new
     @student = Student.new
   end

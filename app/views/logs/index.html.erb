@@ -1,15 +1,32 @@
-<h3>Contact Logs</h3>
+<%= link_to students_path do %>
+  <span aria-hidden="true"><h4 class="nav">&laquo; Back</h4></span>
+<% end %>
 
-<h2>
-  <%= @student.last_name %>,
-  <%= @student.first_name %>
-</h2>
-<h4>
-  <%= link_to "Back", students_path %>
-</h4>
-<h4>
-  <%= link_to "Create a new log", new_student_log_path %>
-</h4>
+<h3>
+  <%= @student.first_name %> <%= @student.last_name %>'s Contact Logs
+</h3>
+
+<h5 class="text-center">
+  <%= link_to "Edit Student", edit_student_path(@student) %>
+  <%= link_to "Delete Student", student_path(@student), method: :delete %>
+</h5>
+
+<div class="student_contact_info">
+    <dl class="dl-horizontal">
+      <dt>Date of Birth:</dt>
+      <dd><%= @student.date_of_birth %></dd>
+      <dt>Address:</dt>
+      <dd><%= @student.address %></dd>
+      <dt>Phone Number:</dt>
+      <dd><%= @student.phone_number %></dd>
+      <dt>Email Address:</dt>
+      <dd><%= @student.email_address %></dd>
+    </dl>
+</div>
+
+<div class="button_wrapper">
+  <h4><button class="btn-lg btn"><%= link_to "Create a new log", new_student_log_path %></button></h4>
+</div>
 
 <% @student.logs.each do |log| %>
   <p style="background: <%=log.get_color%>">
