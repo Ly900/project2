@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Project2</title>
+  <title>TeacherFAMConnect</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script src="//use.edgefonts.net/lato.js"></script>
 </head>
 <body>
-  <button class="bob">Click me!</button>
   <header>
     <ul class="left">
       <li>
           <h1 id="logo">
-            <strong>T</strong>eacher<strong>F</strong>am<strong>C</strong>onnect.
+            Teacher<font color="orange">Fam</font>Connect.
           </h1>
       </li>
     </ul>
@@ -30,8 +29,6 @@
       </li>
     </ul>
   </header>
-
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>

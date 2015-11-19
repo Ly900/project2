@@ -16,7 +16,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html, body, header, h1, h2, h3, ul, li, span {
+html, body, header, h1, h2, h3, ul, li, a, button, div, img {
   margin: 0;
   padding: 0;
   border: 0;
@@ -46,7 +46,7 @@ header {
 }
 
 h1#logo {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 300;
   font-variant: small-caps;
   letter-spacing: 2px;
@@ -55,10 +55,11 @@ h1#logo {
 }
 
 h2#sign_in_status {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 100;
   letter-spacing: 1px;
   color: #fff;
+  margin-left: 2px;
 }
 
 ul.left {
@@ -84,4 +85,60 @@ h3 {
   letter-spacing: 3px;
   text-transform:  uppercase;
   font-weight: 100;
+  margin-top: 5px;
+}
+
+div.image {
+  margin: 10px auto 5px auto;
+  text-align: center;
+}
+
+img#boy {
+  width: 50px;
+}
+
+.button_wrapper {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    background-color: #FFB600;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+  background-color: #FAD16B;
+}
+
+.btn:active {
+  background-color: #FF9C00;
+}
+
+a:link {
+  color: #103555;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #103555;
+}
+
+a:visited{
+  color: #103555;
+}
+
+div.student_info {
+  border: 1px solid orange;
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
 }

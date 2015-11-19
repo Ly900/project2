@@ -1,9 +1,13 @@
-<h3>All Your Students</h3>
+<h3>My Class</h3>
+<div class="image">
+  <img src="/assets/boy-reading.gif" id="boy">
+</div>
+<div class="button_wrapper">
+  <button class="btn-lg btn"><%= link_to "Add a New Student", new_student_path %></button>
+</div>
 
-<%= link_to "Add a New Student", new_student_path %>
-
-<% not_sorted = @students.each do |student| %>
-  <p>
+<% @students.each do |student| %>
+  <div class="student_info">
     <strong>First Name:</strong>
     <%= student.first_name %><br>
     <strong>Last Name:</strong>
@@ -20,5 +24,5 @@
     <%= link_to "View Contact Log", student_logs_path(student) %>
     <%= link_to "Edit Student", edit_student_path(student) %>
     <%= link_to "Delete Student", student_path(student), method: :delete %> <br>
-  </p>
+  </div>
 <% end %>
