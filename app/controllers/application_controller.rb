@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     private
 
       def user_not_authorized
-        flash[:error] = "You don't have access to that student. Why don't you check out the students below?"
+        flash[:error] = "You don't have access to that student."
         redirect_to root_url
       end
 
