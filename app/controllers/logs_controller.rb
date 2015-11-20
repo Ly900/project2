@@ -1,5 +1,7 @@
 class LogsController < ApplicationController
   before_action :find_student
+  load_and_authorize_resource :student
+  load_and_authorize_resource :log, :through => :student
 
   def find_student
     @student = Student.find(params[:student_id])
@@ -10,7 +12,8 @@ class LogsController < ApplicationController
     @students = current_user.students
     else
     end
-  end 
+    # authorize! :read, @students
+  end
 
   def edit
     @log = Log.find(params[:id])
