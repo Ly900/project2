@@ -2,26 +2,26 @@
   <span aria-hidden="true"><h4 class="nav">&laquo; Back</h4></span>
 <% end %>
 
-<%= form_for [@student, @log] do |f| %>
-  <p>
-    <%= f.label :date_of_contact %>:<br>
-    <%= f.date_field :date_of_contact %>
-  </p>
-  <p>
-    <%= f.label :mode_of_contact %>:<br>
+<div class="form_container">
+  <%= form_for [@student, @log] do |f| %>
+  <div class="form-group">
+    <%= f.label :date_of_contact %>:
+    <%= f.date_field :date_of_contact, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :mode_of_contact %>:
     <%= f.select :mode_of_contact, ["phonecall", "email", "in person", "note home", "other"] %>
-  </p>
-  <p>
-    <%= f.label :type_of_contact %>:<br>
+  </div>
+  <div class="form-group">
+    <%= f.label :type_of_contact %>:
     <%= f.radio_button :type_of_contact, "Positive", :checked => true %> Positive
     <%= f.radio_button :type_of_contact, "Negative" %> Negative
     <%= f.radio_button :type_of_contact, "Neutral" %> Neutral
-  </p>
-  <p>
-    <%= f.label :contact_details %>:<br>
-    <%= f.text_area :contact_details, :cols => 50, :rows => 10 %>
-  </p>
-  <p>
+  </div>
+  <div class="form-group">
+    <%= f.label :contact_details %>:
+    <%= f.text_area :contact_details, :cols => 50, :rows => 10, class: "form-control" %>
+  </div>
     <%= f.submit %>
-  </p>
-<% end %>
+  <% end %>
+</div>
