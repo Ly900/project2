@@ -2,6 +2,8 @@ class StudentsController < ApplicationController
   load_and_authorize_resource
   before_action :find_student, only: [:show, :edit, :update, :destroy]
 
+# make sure to put this method as a private method, as it stands now, find_student is an action that can be called.
+# I do love that you're using callbacks in your controller though, this is great!
   def find_student
     @student = Student.find(params[:id])
   end

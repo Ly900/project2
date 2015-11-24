@@ -17,7 +17,7 @@
 //= require_tree .
 
 $(document).ready(function () {
-
+// remember to get rid of any code that doesn't have any functionality.
 $("button.bob").on("click", function () {
   alert("Bob was clicked!");
 
