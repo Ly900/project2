@@ -1,5 +1,6 @@
 class LogsController < ApplicationController
   before_action :find_student
+  # what does load and authorize do? How is the auth happening?
   load_and_authorize_resource :student
   load_and_authorize_resource :log, :through => :student
 
@@ -12,6 +13,7 @@ class LogsController < ApplicationController
     @students = current_user.students
     else
     end
+    # what does this do? comments!
     # authorize! :read, @students
   end
 
